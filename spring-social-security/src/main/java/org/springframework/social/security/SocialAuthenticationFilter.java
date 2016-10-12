@@ -96,7 +96,8 @@ public class SocialAuthenticationFilter extends AbstractAuthenticationProcessing
 	
 	/**
 	 * The URL to redirect to if authentication fails or if authorization is denied by the user.
-	 * @param defaultFailureUrl The failure URL. Defaults to "/signin" (relative to the servlet context).
+	 * @param defaultFailureUrl The failure URL to use by default
+	 * @deprecated use {@link #setPostFailureUrl(String)} instead
 	 */
 	public void setDefaultFailureUrl(String defaultFailureUrl) {
 		delegateAuthenticationFailureHandler.setDefaultFailureUrl(defaultFailureUrl);

@@ -180,8 +180,9 @@ public class SpringSocialConfigurer extends SecurityConfigurerAdapter<DefaultSec
 
 	/**
 	 * Sets the URL to redirect to if authentication fails or if authorization is denied by the user.
-	 * @param defaultFailureUrl the URL to redirect to after an authentication fail or authorization deny
+	 * @param defaultFailureUrl The failure URL to use by default
 	 * @return this SpringSocialConfigurer for chained configuration
+	 * @deprecated use {@link #postFailureUrl(String)} instead
 	 */
 	public SpringSocialConfigurer defaultFailureUrl(String defaultFailureUrl) {
 		this.defaultFailureUrl = defaultFailureUrl;
